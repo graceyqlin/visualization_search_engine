@@ -175,6 +175,13 @@ jekyll serve
 ```
 ![Website](docs/img/portfolio/7.png)
 
+## Demo Screen Shots
+![Demo1](docs/img/portfolio/8.png)
+![Demo2](docs/img/portfolio/9.png)
+![Demo3](docs/img/portfolio/10.png)
+![Demo4](docs/img/portfolio/11.png)
+
+
 ## Additional Resources
 
 * [Week 14 Presentation 3](https://docs.google.com/presentation/d/15oKzgl3USPItpqjKc6EadOLzsUdqpHfu3xeozCo-XxA/edit#slide=id.g7a70253d8d_0_18)
