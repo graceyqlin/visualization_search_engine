@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang='en'>
+<style>
+.content {
+  font-family: "Arial";
+  font-size: 25px;
+  position: fixed;
+  text-align:center;
+  bottom: 125px;
+  background: rgba(0, 0, 0, 0.1);
+  color: #f1f1f1;
+  width: 100%;
+}
+
+.content0 {
+  font-family: "Arial";
+  font-size: 25px;
+  position: fixed;
+  text-align:center;
+  bottom: 200px;
+  background: rgba(0, 0, 0, -0.1);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+.form {
+  margin: auto;
+  width: 35%;
+}
+
+.result {
+  font-family: "Arial";
+  font-size: 12px;
+  text-align:center;
+  background: rgba(0, 0, 0, 0.1);
+  color: black;
+  width: 100%;
+  padding: 20px;
+}
+
+img {
+  opacity: 0.08;
+  filter: alpha(opacity=0.08);
+}
+</style>
+
+<head>
+    <title>Vizziest</title>
+</head>
+
+<video autoplay muted playsinline id="myVideo">
+  <source src="/static/Up.mp4" type="video/mp4" class="fillWidth"></source>
+</video>
+
+<div class="content">
+  <img src="/static/vizziest_new.png"></img>
+</div>
+
+<div class="content0">
+  <h1>Vizziest</h1>
+  <p>Pairing visualization tasks with proper languages, libraries and tools...</p>
+
+  <form action="{{ url_for('main') }}" method="POST"-->
+    <input name="userquery" type="string" placeholder="Tell me your visualization needs ..." size="100" required>
+    <input type="radio" name="options" id="option1" value="option 1" checked><font size=2>TF-IDF</font></input>
+    <input type="radio" name="options" id="option2" value="option 2"><font size=2>BERT</font></input> 
+    <input type="submit">
+  </form>
+  <p><font size=2> @ 2019 by <a href="https://ucbiyyq.github.io/ucbiyyq-w210-jcgy/">Vizziest</a>. Proudly created by JCGY team.</font></p>
+</div>
+
+</html>

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang='en'>
+<style>
+.content {
+  font-family: "Arial";
+  font-size: 10px;
+  position: fixed;
+  text-align: center;
+  top: 50px;
+  background: rgba(0, 0, 0, 0.1);
+  color: #f1f1f1;
+  width: 100%;
+}
+
+.content0 {
+  font-family: "Arial";
+  font-size: 10px;
+  text-align :center;
+  position: fixed;
+  top: 15px;
+  background: rgba(0, 0, 0, 0.1);
+  color: #f1f1f1;
+  width: 100%;
+}
+
+.content1 {
+  font-family: "Arial";
+  font-size: 10px;
+  text-align: center;
+  position: fixed;
+  top: 650px;
+  background: rgba(0, 0, 0, 0.1);
+  color: #f1f1f1;
+  width: 100%;
+}
+
+.form {
+  margin: auto;
+  width: 35%;
+}
+
+.result {
+  font-family: "Arial";
+  font-size: 12px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.1);
+  color: black;
+  width: 100%;
+  padding: 20px;
+}
+
+table td {
+  width: 200px;
+  word-wrap: break-word;
+  padding: 20px;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+</style>
+
+<head>
+  <title>Vizziest</title>
+</head>
+
+<video autoplay muted playsinline id="myVideo">
+  <source src="/static/Up.mp4" type="video/mp4" class="fillWidth"></source>
+</video>
+
+<div class="content0">
+  <p><font size=2>Your viz query is: <b>{{ original_input }}</b></font></p>
+</div>
+
+<div class="content" style="overflow:scroll; height:600px;">
+  <table border="0" align="center">
+    <tr>
+      <td bgcolor=C0C0C0 align="center" width=10px><font color="black"><b>Question</b></font></td>
+      {% for sim_doc in que %}
+        <td bgcolor="white"><font color="black"><b>{{ sim_doc }}</b></font></td>
+      {% endfor %}
+    </tr>
+    <tr align="left">
+      <td bgcolor=C0C0C0 align="center" width=10px><font color="black"><b>Answer</b></font></td>
+      {% for sim_doc in ans %}
+        <td bgcolor="white"><font color="black">{{ sim_doc|replace("nan","")|safe }}</font></td>
+      {% endfor %}
+    </tr>
+    <tr>
+      <td bgcolor=C0C0C0 align="center" width=10px><font color="black"><b>Image</b></font></td>
+      {% for sim_doc in img %}
+        <td bgcolor="white"><font color="black">{{ sim_doc|replace("[", "")|replace("]","")|replace("nan","")|safe }}</font></td>
+      {% endfor %}
+    </tr>
+    <tr align="left">
+      <td bgcolor=C0C0C0 align="center" width=10px><font color="black"><b>Code</b></font></td>
+      {% for sim_doc in code %}
+        <td bgcolor="white"><font color="black">{{ sim_doc|replace("[", "")|replace("]","")|replace("nan","")|safe }}</font></td>       
+      {% endfor %}
+    </tr>
+  </table>
+</div>
+
+<div class="content1">
+  <p><font size=2> 
+  <a href="/">Back to home</a><br>
+  <br>@ 2019 by <a href="https://ucbiyyq.github.io/ucbiyyq-w210-jcgy/">Vizziest</a>. Proudly created by JCGY team.</font></p>
+</div>
+
+</html>
