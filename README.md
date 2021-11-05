@@ -2,6 +2,12 @@
 
 **Pairing visualization tasks with proper languages, libraries and tools**
 
+This project built a search engine that allowed visualization professionals to 
+
+1. search by using either TF-IDF or BERT
+2. see aggregated results with image and code snippet
+3. compare visualizations from different tools (such as R, Python, Tableau, etc)
+
 MIDS W210.6 Fall 2019 Capstone Project Repository - [visualization_search_engine](https://github.com/graceyqlin/visualization_search_engine)
 
 **JCGY Team Members:** [Jeffrey Braun](mailto:jbraun@ischool.berkeley.edu), [Chi Iong Ansjory](mailto:ansjory@ischool.berkeley.edu), [Yuqing (Grace) Lin](mailto:ylin@ischool.berkeley.edu), [Yang Yang Qian](yangyang.qian@ischool.berkeley.edu)
